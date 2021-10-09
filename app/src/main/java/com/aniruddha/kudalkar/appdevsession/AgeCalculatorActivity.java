@@ -51,10 +51,17 @@ public class AgeCalculatorActivity extends AppCompatActivity {
         final Button btn = findViewById(R.id.btStkBk);
         btn.setOnClickListener(v -> {
 
-            Intent intent = new Intent( // providing your intention to the system
-                    this,
-                    StockBookActivity.class
+//            Intent intent = new Intent( // providing your intention to the system
+//                    this, // source
+//                    StockBookActivity.class // target
+//            );
+
+            Intent intent = new Intent(
+                    Intent.ACTION_DIAL // action
             );
+
+            // explicit intent: the intent where you specify source and target explicitly
+            // implicit intent the intent where you pass action, and source and target are missing
 
             startActivity(intent);
         });
