@@ -3,6 +3,7 @@ package com.aniruddha.kudalkar.appdevsession;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -56,9 +57,15 @@ public class AgeCalculatorActivity extends AppCompatActivity {
 //                    StockBookActivity.class // target
 //            );
 
-            Intent intent = new Intent(
+            /*Intent intent = new Intent(
                     Intent.ACTION_DIAL // action
+            );*/
+
+            Intent intent = new Intent(
+                    Intent.ACTION_VIEW // action,
+
             );
+            intent.setData(Uri.parse("https://google.com"));
 
             // explicit intent: the intent where you specify source and target explicitly
             // implicit intent the intent where you pass action, and source and target are missing
