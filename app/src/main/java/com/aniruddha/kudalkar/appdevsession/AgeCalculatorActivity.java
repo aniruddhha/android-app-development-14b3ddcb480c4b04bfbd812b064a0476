@@ -1,9 +1,10 @@
 package com.aniruddha.kudalkar.appdevsession;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
@@ -17,7 +18,6 @@ public class AgeCalculatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_age_calculator);
 
         final TextView txt = findViewById(R.id.txAg);
-
         CalendarView cal = findViewById(R.id.calBd);
         cal.setOnDateChangeListener((view, year, month, dayOfMonth) -> {
 
@@ -46,6 +46,17 @@ public class AgeCalculatorActivity extends AppCompatActivity {
             long years = days / 365;
 
             txt.setText("Age "+ years + " years, Days "+days);
+        });
+
+        final Button btn = findViewById(R.id.btStkBk);
+        btn.setOnClickListener(v -> {
+
+            Intent intent = new Intent( // providing your intention to the system
+                    this,
+                    StockBookActivity.class
+            );
+
+            startActivity(intent);
         });
     }
 }
