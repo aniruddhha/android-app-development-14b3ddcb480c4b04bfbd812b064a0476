@@ -3,6 +3,7 @@ package com.aniruddha.kudalkar.appdevsession.week2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,8 @@ public class FilesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_files);
+
+        Log.i("@ani", "Root Directory "+getFilesDir());
 
         findViewById(R.id.btRd).setOnClickListener(v -> {
             try {
