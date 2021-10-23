@@ -27,6 +27,7 @@ public class FilesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_files);
 
         Log.i("@ani", "Internal Storage Root Directory "+getFilesDir());
+        Log.i("@ani", "External Root "+Environment.getExternalStoragePublicDirectory(""));
 
         findViewById(R.id.btRd).setOnClickListener(v -> {
 
