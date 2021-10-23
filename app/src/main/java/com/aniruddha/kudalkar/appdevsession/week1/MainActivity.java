@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.appdevsession;
+package com.aniruddha.kudalkar.appdevsession.week1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.aniruddha.kudalkar.appdevsession.R;
 
 public class MainActivity extends AppCompatActivity {
 

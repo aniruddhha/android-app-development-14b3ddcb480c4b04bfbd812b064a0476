@@ -1,4 +1,4 @@
-package com.aniruddha.kudalkar.appdevsession;
+package com.aniruddha.kudalkar.appdevsession.week1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
+
+import com.aniruddha.kudalkar.appdevsession.R;
 
 import java.util.Calendar;
 

@@ -9,21 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDevSession">
+
         <activity
-            android:name=".StockBookActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AgeCalculatorActivity"
-            android:exported="true">
+            android:name=".week2.FilesActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".MainActivity"
+            android:name=".week1.StockBookActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".week1.AgeCalculatorActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".week1.MainActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

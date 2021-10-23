@@ -1,8 +1,10 @@
-package com.aniruddha.kudalkar.appdevsession;
+package com.aniruddha.kudalkar.appdevsession.week1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.aniruddha.kudalkar.appdevsession.R;
 
 public class StockBookActivity extends AppCompatActivity {
 
