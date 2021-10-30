@@ -13,6 +13,7 @@ import com.aniruddha.kudalkar.appdevsession.R;
 import java.io.File;
 import java.io.IOException;
 
+//https://stackoverflow.com/questions/41072643/android-studio-build-avd-unknown-error
 public class MediaActivity extends AppCompatActivity {
 
     @Override
