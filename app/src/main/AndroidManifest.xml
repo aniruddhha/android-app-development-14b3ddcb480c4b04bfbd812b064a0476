@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aniruddha.kudalkar.appdevsession">
+    package="com.aniruddha.kudalkar.appdevsession" >
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +14,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppDevSession">
+        android:theme="@style/Theme.AppDevSession" >
         <activity
-            android:name=".week3.SmsActivity"
+            android:name=".week3.media.MediaActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +26,11 @@
         </activity>
 
         <activity
-            android:name=".week3.TelephonyActivity"
-            android:exported="true"/>
-
+            android:name=".week3.sms.SmsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".week3.telephony.TelephonyActivity"
+            android:exported="true" />
         <activity
             android:name=".week2.db.DbActivity"
             android:exported="true" />
