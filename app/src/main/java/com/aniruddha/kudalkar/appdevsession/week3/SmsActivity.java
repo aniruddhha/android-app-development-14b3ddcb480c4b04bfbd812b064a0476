@@ -1,12 +1,16 @@
 package com.aniruddha.kudalkar.appdevsession.week3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.widget.Toast;
 
 import com.aniruddha.kudalkar.appdevsession.R;
 
@@ -49,11 +53,26 @@ public class SmsActivity extends AppCompatActivity {
                 new ImpMsg(
                         "Home",
                         "I am needing help in my college",
-                        "7451355895"
+                        "9834519597"
                 )
         );
 
-        SmsAdapter adapter = new SmsAdapter(this, messages);
+        final SmsHelper helper = new SmsHelper(
+                SmsManager.getDefault()
+        );
+
+        final MutableLiveData<ImpMsg> clicked = new MutableLiveData<ImpMsg>();
+        clicked.observe(this, impMsg -> {
+            Toast.makeText(this, impMsg.getNm(), Toast.LENGTH_SHORT).show();
+            helper.sendImpMsg(impMsg);
+
+        });
+
+        SmsAdapter adapter = new SmsAdapter(
+                this,
+                messages,
+                clicked
+        );
         rec.setAdapter(adapter);
     }
 }
