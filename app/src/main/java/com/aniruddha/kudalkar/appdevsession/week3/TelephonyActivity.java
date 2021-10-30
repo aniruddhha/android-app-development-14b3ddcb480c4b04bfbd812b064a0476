@@ -9,6 +9,7 @@ import android.telephony.CellInfo;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.aniruddha.kudalkar.appdevsession.R;
 
@@ -28,6 +29,8 @@ public class TelephonyActivity extends AppCompatActivity {
 
     private void phoneState(TelephonyManager mgr) {
 
+        final TelephonyActivity act = this;
+
         final PhoneStateListener listener = new PhoneStateListener() {
             @Override
             public void onCallStateChanged(int state, String phoneNumber) {
@@ -36,14 +39,29 @@ public class TelephonyActivity extends AppCompatActivity {
                 switch (state) {
                     case TelephonyManager.CALL_STATE_RINGING: {
                         Log.i("@ani", "Your Device Is Ringing");
+                        Toast.makeText(
+                                act,
+                                "Your Device Is Ringing",
+                                Toast.LENGTH_SHORT
+                        ).show();
                         break;
                     }
                     case TelephonyManager.CALL_STATE_OFFHOOK: {
                         Log.i("@ani", "Your Device Is Off Hook");
+                        Toast.makeText(
+                                act,
+                                "Your Device Is Off Hook",
+                                Toast.LENGTH_SHORT
+                        ).show();
                         break;
                     }
                     case TelephonyManager.CALL_STATE_IDLE: {
                         Log.i("@ani", "Your Device Is IDLE");
+                        Toast.makeText(
+                                act,
+                                "Your Device Is IDLE",
+                                Toast.LENGTH_SHORT
+                        ).show();
                         break;
                     }
                     default: {
