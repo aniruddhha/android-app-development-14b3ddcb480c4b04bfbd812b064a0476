@@ -2,7 +2,6 @@ package com.aniruddha.kudalkar.appdevsession.week2.db;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
-import androidx.room.RoomDatabase;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import com.aniruddha.kudalkar.appdevsession.R;
 
 import java.util.List;
-import java.util.concurrent.Executors;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.schedulers.Schedulers;
