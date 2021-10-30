@@ -50,7 +50,7 @@ public class SmsActivity extends AppCompatActivity {
                 new ImpMsg(
                         "Home",
                         "I am needing help in my college",
-                        "9834519597"
+                        "435678909"
                 )
         );
 
