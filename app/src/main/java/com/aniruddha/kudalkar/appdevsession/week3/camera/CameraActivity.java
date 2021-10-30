@@ -20,6 +20,10 @@ import com.aniruddha.kudalkar.appdevsession.week1.MainActivity;
 
 import java.io.File;
 
+
+// aniruddha.kudalkar@gmail.com
+// +919607352625
+
 public class CameraActivity extends AppCompatActivity {
 
     @Override
